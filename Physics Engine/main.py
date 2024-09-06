@@ -24,7 +24,7 @@ def main() -> None:
     
     for i in range(1):
         p = Particle(40, screen.get_height()/10*i+screen.get_height()/10/2)
-        p.v.x = 1
+        p.force.x = 1000
         particles.append(p)
 
     while running:
@@ -36,7 +36,7 @@ def main() -> None:
 
         # Drawing
         for p in particles:
-            pygame.draw.circle(screen, PARTICLE_COLOR, p.pos, 1)
+            pygame.draw.circle(screen, PARTICLE_COLOR, p.position, 10)
 
         # Updating
         for p in particles:
